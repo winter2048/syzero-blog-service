@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SyZero.Blog.IApplication</name>
+    </assembly>
+    <members>
+        <member name="M:SyZero.Blog.IApplication.IConfigAppService.ConfigInfo">
+            <summary>
+            测试水水水水水水水水水水水
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.IConfigAppService.ConfigInfo(System.Int32)">
+            <summary>
+            测试水水水水水水水水水水水
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.IConfigAppService.PostConfigInfo(System.Int32,System.Boolean)">
+            <summary>
+             xxxxxxxxxx GetConfigInfo(int num, bool isok)
+            </summary>
+            <param name="num">4444</param>
+            <param name="isok">5555</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

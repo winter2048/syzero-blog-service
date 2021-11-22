@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SyZero.Blog.Web</name>
+    </assembly>
+    <members>
+        <member name="T:SyZero.Blog.Web.Authentication.ApiCheckTokenFilterAttribute">
+            <summary>
+            Action 拦截验证授权码
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.Web.Authentication.ApiCheckTokenFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            每次请求Action之前发生，，在行为方法执行前执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:SyZero.Blog.Web.Authentication.AppExceptionFilter">
+            <summary>
+            异常过滤器
+            </summary>
+        </member>
+        <member name="T:SyZero.Blog.Web.Authentication.AppResultFilter">
+            <summary>
+            异常过滤器
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.Web.Authentication.AppVerificationFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            每次请求Action之前发生，，在行为方法执行前执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:SyZero.Blog.Web.Authentication.AppVerificationFilter.GetPrincipal(System.String)">
+            <summary>
+            此方法用解码字符串token，并返回秘钥的信息对象
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.Web.Models.ResultModel.#ctor(System.Object)">
+            <summary>
+            自定义
+            </summary>
+            <param name="data">数据对象 例如:{status=500,action="6666"}</param>
+            <param name="msgStatus"></param>
+        </member>
+        <member name="P:SyZero.Blog.Web.Models.ResultModel.code">
+            <summary>
+            成功状态码
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.Web.Models.ResultModel.data">
+            <summary>
+            错误消息
+            </summary>
+        </member>
+    </members>
+</doc>
