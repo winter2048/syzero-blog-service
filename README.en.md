@@ -1,7 +1,7 @@
-# syzero-blog-service
+# syzero-authorization-service
 
 #### Description
-syzero-blog服务
+授权服务
 
 #### Software Architecture
 Software architecture description

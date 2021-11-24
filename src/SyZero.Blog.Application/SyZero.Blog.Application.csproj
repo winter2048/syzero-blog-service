@@ -5,10 +5,11 @@
     <RootNamespace>SyZero.Blog.Application</RootNamespace>
     <AssemblyName>SyZero.Blog.Application</AssemblyName>
     <Platforms>AnyCPU;x64</Platforms>
-    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SyZero.Blog.Application.xml</DocumentationFile>
+  </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />

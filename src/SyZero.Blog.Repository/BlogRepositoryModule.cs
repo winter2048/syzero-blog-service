@@ -1,8 +1,4 @@
 ﻿using Autofac;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using SyZero.Domain.Repository;
 using SyZero.SqlSugar;
 
@@ -22,6 +18,7 @@ namespace SyZero.Blog.Repository
             builder.RegisterGeneric(typeof(BlogRepositoryBase<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope().PropertiesAutowired();
             ////注册持久化
             builder.RegisterType<UnitOfWork<BlogDbContext>>().As<IUnitOfWork>().InstancePerLifetimeScope().PropertiesAutowired();
+
         }
     }
 }

@@ -3,25 +3,25 @@ kind: Deployment
 metadata:
   labels:
     k8s.kuboard.cn/layer: svc
-  name: blog-service
+  name: authorization-service
   namespace: syzero
 spec:
   replicas: 3
   selector:
     matchLabels:
-      project: blog
+      project: authorization
       app: service
-  syzero.blog:
+  template:
     metadata:
       labels:
-        project: blog
+        project: authorization
         app: service
     spec:
       imagePullSecrets:
       - name: registry-pull-secret
       containers:
       - name: ssr
-        image: $IMAGE_NAME
+        image: 192.168.2.40:8888/syzeroblog/syzero-blog-service:14
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -31,14 +31,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: blog-service
+  name: authorization-service
   namespace: syzero
   labels:
-    project: blog
+    project: authorization
     app: service
 spec:
   selector:
-    project: blog
+    project: authorization
     app: service
   ports:
   - name: web

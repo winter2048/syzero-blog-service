@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SyZero;
-
-namespace SyZero.Blog.Web.Models
+﻿namespace SyZero.Blog.Web.Core.Models
 {
     public class ResultModel
     {

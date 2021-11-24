@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using SyZero.Blog.Web.Models;
+using SyZero.Blog.Web.Core.Models;
 
-namespace SyZero.Blog.Web.Authentication
+namespace SyZero.Blog.Web.Core.Filter
 {
     /// <summary>
     /// 异常过滤器
@@ -19,7 +14,7 @@ namespace SyZero.Blog.Web.Authentication
 
         public void OnResultExecuted(ResultExecutedContext context)
         {
-           // context.Result 
+            // context.Result 
         }
 
         public void OnResultExecuting(ResultExecutingContext context)

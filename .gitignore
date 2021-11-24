@@ -19,6 +19,7 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+.sonarqube/
 
 # Visual Studio cache/options directory
 .vs/

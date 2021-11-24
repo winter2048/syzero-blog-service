@@ -1,14 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using SyZero;
-using SyZero.Blog.Web.Models;
 
-namespace SyZero.Blog.Web.Authentication
+namespace SyZero.Blog.Web.Core.Filter
 {
     /// <summary>
     /// 异常过滤器
@@ -19,9 +12,9 @@ namespace SyZero.Blog.Web.Authentication
 
         public void OnException(ExceptionContext context)
         {
-          
+
             var _Exception = context.Exception;
-            if (_Exception is SyMessageBox _Error)
+            if (_Exception is SyMessageException _Error)
             {
                 context.ExceptionHandled = true;
                 context.HttpContext.Response.StatusCode = 200;
@@ -33,7 +26,7 @@ namespace SyZero.Blog.Web.Authentication
             }
             else
             {
-               // Tools.Log.Write(_Exception, context.HttpContext.Connection.RemoteIpAddress.ToString());//nlog 写入日志到 txt
+                // Tools.Log.Write(_Exception, context.HttpContext.Connection.RemoteIpAddress.ToString());//nlog 写入日志到 txt
                 var _MessageBoxModel = new SyMessageBoxModel($"服务端出现异常![异常消息：{_Exception.Message}]", SyMessageBoxStatus.Abnormal);
                 context.Result = new JsonResult(_MessageBoxModel);
             }

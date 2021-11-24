@@ -10,13 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="FakesAssemblies\**" />
     <Compile Remove="wwwroot\**" />
-    <Content Remove="FakesAssemblies\**" />
     <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="FakesAssemblies\**" />
     <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="FakesAssemblies\**" />
     <None Remove="wwwroot\**" />
   </ItemGroup>
 
@@ -26,19 +22,17 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.QualityTools.Testing.Fakes" Version="16.7.4-beta.20330.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.AspNetCore\SyZero.AspNetCore.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Consul\SyZero.Consul.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.DynamicWebApi\SyZero.DynamicWebApi.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Feign\SyZero.Feign.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Log4Net\SyZero.Log4Net.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Nacos\SyZero.Nacos.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Redis\SyZero.Redis.csproj" />
-    <ProjectReference Include="..\..\..\SYZERO\src\SyZero.Core\SyZero.Swagger\SyZero.Swagger.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.AspNetCore\SyZero.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Consul\SyZero.Consul.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.DynamicWebApi\SyZero.DynamicWebApi.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Feign\SyZero.Feign.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Log4Net\SyZero.Log4Net.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Nacos\SyZero.Nacos.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Redis\SyZero.Redis.csproj" />
+    <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Swagger\SyZero.Swagger.csproj" />
     <ProjectReference Include="..\SyZero.Blog.Application\SyZero.Blog.Application.csproj" />
   </ItemGroup>
 
@@ -52,12 +46,7 @@
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;1591</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-    <AdditionalDesignTimeBuildInput Remove="FakesAssemblies\**" />
-  </ItemGroup>
+
 
 </Project>
 
