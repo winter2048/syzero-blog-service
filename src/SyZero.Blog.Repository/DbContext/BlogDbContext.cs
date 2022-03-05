@@ -11,7 +11,6 @@ namespace SyZero.Blog.Repository
         {
             this.Context.Aop.OnLogExecuted = (sql, pars) =>//SQL执行后
             {
-                Console.WriteLine(this.Context.Ado.Connection.ConnectionString);
                 WriteLog(sql, pars, this.Context.Ado.SqlExecutionTime.TotalMilliseconds);
             };
             this.Context.Aop.OnError = (exp) =>//SQL报错

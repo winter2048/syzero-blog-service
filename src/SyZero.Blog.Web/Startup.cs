@@ -19,6 +19,7 @@ using SyZero.Feign;
 using SyZero.Log4Net;
 using SyZero.Redis;
 using SyZero.Web.Common;
+using SyZero.SqlSugar;
 
 namespace SyZero.Blog.Web
 {
@@ -36,7 +37,7 @@ namespace SyZero.Blog.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
-         
+
             services.AddControllers().AddMvcOptions(options =>
             {
                 options.Filters.Add(new AppExceptionFilter());
@@ -59,26 +60,27 @@ namespace SyZero.Blog.Web
         public void ConfigureContainer(ContainerBuilder builder)
         {
             //使用SyZero
-            builder.RegisterModule<SyZeroModule>();
+            builder.AddSyZero();
             //使用AutoMapper
-            builder.RegisterModule<AutoMapperModule>();
+            builder.AddSyZeroAutoMapper();
             //使用SqlSugar仓储
-            builder.RegisterModule<BlogRepositoryModule>();
+            builder.AddSyZeroSqlSugar<BlogDbContext>();
             //注入控制器
-            builder.RegisterModule<SyZeroControllerModule>();
+            builder.AddSyZeroController();
             //注入Log4Net
-            builder.RegisterModule<Log4NetModule>();
+            builder.AddSyZeroLog4Net();
             //注入Redis
-            builder.RegisterModule<RedisModule>();
+            builder.AddSyZeroRedis();
             //注入公共层
-            builder.RegisterModule<CommonModule>();
+            builder.AddSyZeroCommon();
             //注入Feign
-            builder.RegisterModule<FeignModule>();
+            builder.AddSyZeroFeign();
         }
 
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSyZero();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -92,6 +94,7 @@ namespace SyZero.Blog.Web
             });
             app.UseRouting();
             app.UseStaticFiles();
+            app.UseSyAuthMiddleware((sySeesion) => "Token:" + sySeesion.UserId);
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -105,7 +108,7 @@ namespace SyZero.Blog.Web
             });
             app.UseConsul();
             app.UseSyAuthMiddleware();
-            app.UseSyZero();
+            app.InitTables();
         }
     }
 }
