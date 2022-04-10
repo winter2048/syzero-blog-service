@@ -9,6 +9,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\syzero-core\src\SyZero.Core\SyZero.Web.Common\SyZero.Web.Common.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BlogManagement\Dto\" />
+  </ItemGroup>
   
 </Project>
 

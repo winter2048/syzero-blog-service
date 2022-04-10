@@ -8,7 +8,7 @@ namespace SyZero.Blog.Core.BlogManagement
     /// <summary>
     /// 博文
     /// </summary>
-    public class Blog :Entity
+    public class Blog : Entity
     {
         /// <summary>
         /// 标题
@@ -29,15 +29,11 @@ namespace SyZero.Blog.Core.BlogManagement
         /// <summary>
         /// 分类Id
         /// </summary>
-        public long? CategoryId { get; set; }
-        /// <summary>
-        /// 分类
-        /// </summary>
-        public virtual BlogCategory Category { get; set; }
+        public ICollection<long> CategoryIds { get; set; }
         /// <summary>
         /// 标签
         /// </summary>
-        public virtual ICollection<Tag>  Tags { get; set; }
+        public ICollection<long> TagIds { get; set; }
         /// <summary>
         /// 状态
         /// </summary>
@@ -74,10 +70,5 @@ namespace SyZero.Blog.Core.BlogManagement
         /// 创建时间
         /// </summary>
         public DateTime CreateTime { get; set; } = DateTime.Now;
-
-        /// <summary>
-        /// 评论
-        /// </summary>
-        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

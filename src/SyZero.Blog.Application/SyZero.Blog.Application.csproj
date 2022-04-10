@@ -20,6 +20,14 @@
     <ProjectReference Include="..\SyZero.Blog.Repository\SyZero.Blog.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SyZero.Authorization.IApplication">
+      <HintPath>..\..\..\syzero-authorization-service\src\SyZero.Authorization.IApplication\bin\Debug\netcoreapp3.1\SyZero.Authorization.IApplication.dll</HintPath>
+      <CopyLocal>True</CopyLocal>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
 </Project>
 
 
