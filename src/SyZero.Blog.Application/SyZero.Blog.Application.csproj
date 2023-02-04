@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>SyZero.Blog.Application</RootNamespace>
     <AssemblyName>SyZero.Blog.Application</AssemblyName>
     <Platforms>AnyCPU;x64</Platforms>
@@ -22,9 +22,7 @@
 
   <ItemGroup>
     <Reference Include="SyZero.Authorization.IApplication">
-      <HintPath>..\..\..\syzero-authorization-service\src\SyZero.Authorization.IApplication\bin\Debug\netcoreapp3.1\SyZero.Authorization.IApplication.dll</HintPath>
-      <CopyLocal>True</CopyLocal>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\syzero-authorization-service\src\SyZero.Authorization.IApplication\bin\Debug\net6.0\SyZero.Authorization.IApplication.dll</HintPath>
     </Reference>
   </ItemGroup>
 
