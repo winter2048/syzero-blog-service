@@ -29,11 +29,11 @@ namespace SyZero.Blog.Core.BlogManagement
         /// <summary>
         /// 分类Id
         /// </summary>
-        public ICollection<long> CategoryIds { get; set; }
+        public string CategoryIds { get; set; }
         /// <summary>
         /// 标签
         /// </summary>
-        public ICollection<long> TagIds { get; set; }
+        public string TagIds { get; set; }
         /// <summary>
         /// 状态
         /// </summary>

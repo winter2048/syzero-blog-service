@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using SyZero.Blog.IApplication.BlogManagement.Dto;
 using SyZero.Cache;
 using SyZero.Client;
 using SyZero.Logger;
@@ -21,12 +22,12 @@ namespace SyZero.Blog.IApplication.Users
             _logger = logger;
         }
 
-        public Task<object> GetInfo()
+        public Task<string> Login(Login2Dto input)
         {
-            _logger.Error("Fallback => BlogAppService:GetInfo");
-            throw new NotImplementedException();
+            _logger.Error("Fallback => AuthAppService:Login");
+            return null;
         }
 
-     
+
     }
 }

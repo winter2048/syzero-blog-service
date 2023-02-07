@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using SyZero.Application.Service;
 using SyZero.Authorization.IApplication.Users;
 using SyZero.Authorization.IApplication.Users.Dto;
+using SyZero.Blog.IApplication.BlogManagement.Dto;
 using SyZero.Blog.IApplication.Users;
 using SyZero.Blog.Repository;
 using SyZero.Cache;
@@ -46,13 +47,22 @@ namespace SyZero.Blog.Application.Users
             _authAppService = authAppService;
         }
 
-        public async Task<object> GetInfo()
+        //public async Task<object> GetInfo(string p)
+        //{
+        //    bool opo = await _authAppService.GetVerificationCode(p);
+
+        //    return opo;
+        //}
+       
+
+        public async Task<string> Login(Login2Dto input)
         {
-            UserDto opo = await _authAppService.GetUserInfo();
+            //var dto = ObjectMapper.Map<LoginDto>(input);
 
-            return opo;
+            var opo = await _authAppService.GetUserInfo();
+
+            return _jsonSerialize.ObjectToJSON(opo);
         }
-
     }  
 }
 

@@ -4,11 +4,17 @@
         <name>SyZero.Blog.IApplication</name>
     </assembly>
     <members>
-        <member name="M:SyZero.Blog.IApplication.Users.IBlogAppService.GetInfo">
+        <member name="M:SyZero.Blog.IApplication.Users.IBlogAppService.Login(SyZero.Blog.IApplication.BlogManagement.Dto.Login2Dto)">
             <summary>
-            获取登录人信息
+            登录接口
             </summary>
+            <param name="input"></param>
             <returns></returns>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.Login2Dto.Type">
+            <summary>
+            用户类型
+            </summary>
         </member>
     </members>
 </doc>

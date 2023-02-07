@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using SyZero.Application.Attributes;
 using SyZero.Application.Routing;
+using SyZero.Blog.IApplication.BlogManagement.Dto;
 using SyZero.Web.Common;
 
 namespace SyZero.Blog.IApplication.Users
@@ -10,11 +11,13 @@ namespace SyZero.Blog.IApplication.Users
     public interface IBlogAppService : IApplicationServiceBase
     {
         /// <summary>
-        /// 获取登录人信息
+        /// 登录接口
         /// </summary>
+        /// <param name="input"></param>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET)]
-        Task<object> GetInfo();
+        [ApiMethod(HttpMethod.POST)]
+        Task<string> Login(Login2Dto input);
+
     }
 }
 
