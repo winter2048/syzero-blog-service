@@ -6,20 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-using System;
-using System.IO;
-using SyZero.AspNetCore;
 using SyZero.Blog.Repository;
 using SyZero.Blog.Web.Core.Filter;
-using SyZero.AutoMapper;
-using SyZero.Consul;
 using SyZero.DynamicWebApi;
-using SyZero.Feign;
-using SyZero.Log4Net;
-using SyZero.Redis;
 using SyZero.Web.Common;
-using SyZero.SqlSugar;
 
 namespace SyZero.Blog.Web
 {
@@ -73,8 +63,11 @@ namespace SyZero.Blog.Web
             builder.AddSyZeroRedis();
             //注入公共层
             builder.AddSyZeroCommon();
+            //注入Consul
+            builder.AddConsul();            
             //注入Feign
             builder.AddSyZeroFeign();
+     
         }
 
 
@@ -107,7 +100,6 @@ namespace SyZero.Blog.Web
 
             });
             app.UseConsul();
-            app.UseSyAuthMiddleware();
             app.InitTables();
         }
     }

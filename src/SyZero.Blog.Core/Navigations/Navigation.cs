@@ -23,16 +23,6 @@ namespace SyZero.Blog.Core.Navigations
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// 上级
-        /// </summary>
-        public virtual Navigation Parent { get; set; }
-
-        /// <summary>
-        /// 下级
-        /// </summary>
-        public virtual ICollection<Navigation> Childs { get; set; }
-
-        /// <summary>
         /// 是否在新窗口打开
         /// </summary>
         public bool IsNewTab { get; set; } = false;

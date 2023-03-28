@@ -56,7 +56,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.Swagger", "..\..\syz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.Feign", "..\..\syzero-core\src\SyZero.Core\SyZero.Feign\SyZero.Feign.csproj", "{4F7D41E2-BF3D-40EB-A493-C9A40EF26FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyZero.RabbitMQ", "..\..\syzero-core\src\SyZero.Core\SyZero.RabbitMQ\SyZero.RabbitMQ.csproj", "{58C0BCA9-9758-4189-8A98-1AA4F658ABBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyZero.RabbitMQ", "..\..\syzero-core\src\SyZero.Core\SyZero.RabbitMQ\SyZero.RabbitMQ.csproj", "{58C0BCA9-9758-4189-8A98-1AA4F658ABBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

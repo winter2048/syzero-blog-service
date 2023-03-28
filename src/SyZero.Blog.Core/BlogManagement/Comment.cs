@@ -14,24 +14,9 @@ namespace SyZero.Blog.Core.BlogManagement
         public long BlogId { get; set; }
 
         /// <summary>
-        /// 博文
-        /// </summary>
-        public virtual Blog Blog { get; set; }
-
-        /// <summary>
         /// 上级Id
         /// </summary>
         public long? ParentId { get; set; }
-
-        /// <summary>
-        /// 上级
-        /// </summary>
-        public virtual Comment Parent { get; set; }
-
-        /// <summary>
-        /// 下级
-        /// </summary>
-        public virtual ICollection<Comment> Childs { get; set; }
 
         /// <summary>
         /// 发表人

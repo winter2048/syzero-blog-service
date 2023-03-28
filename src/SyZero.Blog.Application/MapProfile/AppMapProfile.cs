@@ -1,6 +1,6 @@
 using AutoMapper;
-using SyZero.Blog.Core.Users;
-using SyZero.Blog.IApplication.Users.Dto;
+using SyZero.Authorization.IApplication.Users.Dto;
+using SyZero.Blog.IApplication.BlogManagement.Dto;
 
 namespace SyZero.Blog.Application.MapProfile
 {
@@ -8,8 +8,8 @@ namespace SyZero.Blog.Application.MapProfile
     {
         public AppMapProfile()
         {
-            CreateMap<User, CreateUserDto>();
-            CreateMap<CreateUserDto, User>();
+            //CreateMap<User, CreateUserDto>();
+            CreateMap<Login2Dto, LoginDto>();
 
             
         }

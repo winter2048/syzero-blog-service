@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using System.Threading;
+using SyZero.Util;
 
 namespace SyZero.Blog.Web
 {
@@ -15,9 +16,8 @@ namespace SyZero.Blog.Web
                 .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureAppConfiguration((hostingContext, builder) =>
                {
-                   builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: false)
-                   //.AddNacos(cancellationTokenSource.Token) Nacos动态配置
-                   .AddConsul(cancellationTokenSource.Token);  //Consul动态配置
+                   //builder.AddNacos(cancellationTokenSource.Token); //Nacos动态配置
+                   builder.AddConsul(cancellationTokenSource.Token);  //Consul动态配置
                })
                .ConfigureWebHostDefaults(webBuilder =>
                {
