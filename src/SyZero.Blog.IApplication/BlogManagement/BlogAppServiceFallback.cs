@@ -22,7 +22,7 @@ namespace SyZero.Blog.IApplication.Users
             _logger = logger;
         }
 
-        public Task<string> Login(Login2Dto input)
+        public Task<object> Login(Login2Dto input)
         {
             _logger.Error("Fallback => AuthAppService:Login");
             return null;

@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Reference Include="SyZero.Authorization.IApplication">
-      <HintPath>..\..\..\syzero-authorization-service\src\SyZero.Authorization.IApplication\bin\Debug\net6.0\SyZero.Authorization.IApplication.dll</HintPath>
+      <HintPath>..\..\app\SyZero.Authorization.IApplication.dll</HintPath>
     </Reference>
   </ItemGroup>
 

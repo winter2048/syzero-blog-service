@@ -55,13 +55,12 @@ namespace SyZero.Blog.Application.Users
         //}
        
 
-        public async Task<string> Login(Login2Dto input)
+        public async Task<object> Login(Login2Dto input)
         {
             //var dto = ObjectMapper.Map<LoginDto>(input);
-
             var opo = await _authAppService.GetUserInfo();
-
-            return _jsonSerialize.ObjectToJSON(opo);
+            Console.WriteLine(opo);
+            return opo;
         }
     }  
 }

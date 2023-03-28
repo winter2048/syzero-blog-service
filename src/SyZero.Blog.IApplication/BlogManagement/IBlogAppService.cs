@@ -16,7 +16,7 @@ namespace SyZero.Blog.IApplication.Users
         /// <param name="input"></param>
         /// <returns></returns>
         [ApiMethod(HttpMethod.POST)]
-        Task<string> Login(Login2Dto input);
+        Task<object> Login(Login2Dto input);
 
     }
 }
