@@ -13,20 +13,16 @@ using SyZero.Web.Common;
 
 namespace SyZero.Blog.IApplication.Users
 {
-    public class BlogAppServiceFallback : IBlogAppService, IFallback
+    public class ArticleAppServiceFallback : IArticleAppService, IFallback
     {
         private readonly ILogger _logger;
 
-        public BlogAppServiceFallback(ILogger logger)
+        public ArticleAppServiceFallback(ILogger logger)
         {
             _logger = logger;
         }
 
-        public Task<object> Login(Login2Dto input)
-        {
-            _logger.Error("Fallback => AuthAppService:Login");
-            return null;
-        }
+    
 
 
     }

@@ -2,7 +2,7 @@
 
 namespace SyZero.Blog.Repository
 {
-    public class BlogRepository : SqlSugarRepository<Core.BlogManagement.Blog>, IBlogRepository
+    public class BlogRepository : SqlSugarRepository<Core.BlogManagement.Article>, IBlogRepository
     {
         public string GetTest()
         {

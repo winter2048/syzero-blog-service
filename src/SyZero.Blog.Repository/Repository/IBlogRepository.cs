@@ -2,7 +2,7 @@
 
 namespace SyZero.Blog.Repository
 {
-    public interface IBlogRepository : IRepository<Core.BlogManagement.Blog>
+    public interface IBlogRepository : IRepository<Core.BlogManagement.Article>
     {
         string GetTest();
     }

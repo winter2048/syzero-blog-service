@@ -8,15 +8,8 @@ using SyZero.Web.Common;
 
 namespace SyZero.Blog.IApplication.Users
 {
-    public interface IBlogAppService : IApplicationServiceBase
+    public interface IArticleAppService : IApplicationServiceBase
     {
-        /// <summary>
-        /// 登录接口
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
-        Task<object> Login(Login2Dto input);
 
     }
 }
