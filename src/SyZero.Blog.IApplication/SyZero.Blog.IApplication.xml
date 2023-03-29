@@ -4,16 +4,169 @@
         <name>SyZero.Blog.IApplication</name>
     </assembly>
     <members>
-        <member name="M:SyZero.Blog.IApplication.Users.IBlogAppService.Login(SyZero.Blog.IApplication.BlogManagement.Dto.Login2Dto)">
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Title">
             <summary>
-            登录接口
+            标题
             </summary>
-            <param name="input"></param>
-            <returns></returns>
         </member>
-        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.Login2Dto.Type">
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Content">
             <summary>
-            用户类型
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CreateUserId">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CreateUserName">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CategoryId">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CategoryName">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.CommentNums">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.ViewNums">
+            <summary>
+            查看次数
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.IsTop">
+            <summary>
+            是否顶置
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.IsTop">
+            <summary>
+            是否顶置
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.Key">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.CategoryId">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Describe">
+            <summary>
+            描述
             </summary>
         </member>
     </members>
