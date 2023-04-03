@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using SyZero.Domain.Entities;
+using System.Threading.Tasks;
+using SyZero.Application.Service.Dto;
 
-namespace SyZero.Blog.Core.Navigations
+namespace SyZero.Blog.IApplication.Navigations.Dto
 {
-    public class Navigation : Entity
+    public class CreateNavigationDto : EntityDto
     {
         /// <summary>
         /// 名称
@@ -41,5 +43,6 @@ namespace SyZero.Blog.Core.Navigations
         /// 排序
         /// </summary>
         public int Order { get; set; } = 0;
+
     }
 }

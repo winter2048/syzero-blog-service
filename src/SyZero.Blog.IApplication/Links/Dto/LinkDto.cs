@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using SyZero.Domain.Entities;
+using System.Threading.Tasks;
+using SyZero.Application.Service.Dto;
 
-namespace SyZero.Blog.Core.Navigations
+namespace SyZero.Blog.IApplication.Links.Dto
 {
-    public class Navigation : Entity
+    public class LinkDto : EntityDto
     {
         /// <summary>
         /// 名称
@@ -18,19 +20,9 @@ namespace SyZero.Blog.Core.Navigations
         public string Url { get; set; }
 
         /// <summary>
-        /// 图标
+        /// 描述
         /// </summary>
-        public string Icon { get; set; }
-
-        /// <summary>
-        /// 上级Id
-        /// </summary>
-        public long? ParentId { get; set; }
-
-        /// <summary>
-        /// 是否在新窗口打开
-        /// </summary>
-        public bool IsNewTab { get; set; } = false;
+        public string Description { get; set; }
 
         /// <summary>
         /// 是否隐藏
@@ -41,5 +33,6 @@ namespace SyZero.Blog.Core.Navigations
         /// 排序
         /// </summary>
         public int Order { get; set; } = 0;
+
     }
 }

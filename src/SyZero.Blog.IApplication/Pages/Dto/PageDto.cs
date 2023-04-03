@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using SyZero.Domain.Entities;
+using System.Threading.Tasks;
+using SyZero.Application.Service.Dto;
 
-namespace SyZero.Blog.Core.BlogManagement
+namespace SyZero.Blog.IApplication.Pages.Dto
 {
-    /// <summary>
-    /// 博文
-    /// </summary>
-    public class Article : Entity
+    public class PageDto : EntityDto
     {
         /// <summary>
         /// 标题
@@ -27,40 +26,34 @@ namespace SyZero.Blog.Core.BlogManagement
         /// </summary>
         public string Alias { get; set; }
         /// <summary>
-        /// 分类Id
+        /// 作者
         /// </summary>
-        public long? CategoryId { get; set; }
+        public long? CreateUserId { get; set; }
         /// <summary>
         /// 状态
         /// </summary>
         public int Status { get; set; } = 0;
         /// <summary>
-        /// 类型
-        /// </summary>
-        public string Type { get; set; }
-        /// <summary>
         /// 模板
         /// </summary>
         public string Template { get; set; }
         /// <summary>
-        /// 是否顶置
+        /// 作者
         /// </summary>
-        public bool IsTop { get; set; } = false;
-        /// <summary>
-        /// 排序
-        /// </summary>
-        public int Order { get; set; } = 0;
-        /// <summary>
-        /// 点赞次数
-        /// </summary>
-        public int LikeNums { get; set; } = 0;
-        /// <summary>
-        /// 查看次数
-        /// </summary>
-        public int ViewNums { get; set; } = 0;
+        public string CreateUserName { get; set; }
+
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime CreateTime { get; set; } = DateTime.Now;
+        public string CreateTime { get; set; }
+        /// <summary>
+        /// 评论数
+        /// </summary>
+        public int CommentNums { get; set; }
+        /// <summary>
+        /// 查看次数
+        /// </summary>
+        public int ViewNums { get; set; }
+
     }
 }
