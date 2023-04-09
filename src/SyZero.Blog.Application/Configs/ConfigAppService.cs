@@ -10,18 +10,22 @@ using SyZero.Blog.IApplication.Configs.Dto;
 using SyZero.Blog.IApplication.Configs;
 using SyZero.Domain.Repository;
 using SyZero.Runtime.Session;
+using Dynamitey.DynamicObjects;
+using SyZero.Authorization.IApplication.Users;
 
 namespace SyZero.Blog.Application.Configs
 {
     public class ConfigAppService : ApplicationService, IConfigAppService
     {
         private readonly ConfigManager _configManager;
+        private readonly IUserAppService _userAppService;
 
         private readonly IRepository<Config> _configRepository;
-        public ConfigAppService(ConfigManager configAppService, IRepository<Config> configRepository)
+        public ConfigAppService(ConfigManager configAppService, IRepository<Config> configRepository, IUserAppService userAppService)
         {
             _configManager = configAppService;
             _configRepository = configRepository;
+            _userAppService = userAppService;
         }
         /// <summary>
         /// 获取基础设置
@@ -138,6 +142,35 @@ namespace SyZero.Blog.Application.Configs
             await _configManager.SetValueAsync(AppConts.阿里找回密码模板, dto.RetrieveCode);
             await _configManager.SetValueAsync(AppConts.阿里注册模板, dto.RegisterCode);
             await UnitOfWork.CommitTransactionAsync();
+            return true;
+        }
+
+        public async Task<object> WebConfig()
+        {
+            var otherDto = OtherSetting();
+            var basicsDto = BasicsSetting();
+            var seoDto = SeoSetting();
+            var defaultUserDto = await _userAppService.GetUser(1622625989756588032);
+            //var defaultUser = _userRepository.GetModel(p => p.Type == 2);
+           // var defaultUserDto = ObjectMapper.Map<UserDto>(defaultUser);
+            var userDto = defaultUserDto;
+            if (SySession.UserId != null)
+            {
+                userDto = await _userAppService.GetUser(SySession.UserId.Value);
+            }
+            return new { basics = basicsDto, other = otherDto, baseSeo = seoDto, user = userDto, defaultUser = defaultUserDto };
+        }
+
+        public int GetLikeNum()
+        {
+            int num = _configManager.GetValue(AppConts.喜欢数).ToInt32();
+            return num;
+        }
+
+        public bool LikeNum()
+        {
+            int num = _configManager.GetValue(AppConts.喜欢数).ToInt32();
+            _configManager.SetValue(AppConts.喜欢数, (++num).ToString());
             return true;
         }
     }

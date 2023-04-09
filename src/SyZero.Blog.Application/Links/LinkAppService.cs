@@ -19,5 +19,13 @@ namespace SyZero.Blog.Application.Links
         {
             _linkRepository = linkRepository;
         }
+
+        public async Task<List<LinkDto>> GetAll()
+        {
+            var pp = await _linkRepository.GetListAsync(p => p.IsHide == false);
+            pp = pp.OrderBy(p => p.Order);
+
+            return ObjectMapper.Map<List<LinkDto>>(pp.ToList());
+        }
     }
 }

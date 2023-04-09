@@ -20,5 +20,18 @@ namespace SyZero.Blog.Application.Pages
         {
             _blogRepository = blogRepository;
         }
+
+        protected override async Task<IQueryable<Article>> CreateFilteredQueryAsync(PageAndSortQueryDto input)
+        {
+            var q = await base.CreateFilteredQueryAsync(input);
+            return q.Where(p => p.Type == "2");
+        }
+
+        protected override Article MapToEntity(CreateArticleDto createInput)
+        {
+            var entity = base.MapToEntity(createInput);
+            entity.Type = "2";
+            return entity;
+        }
     }
 }

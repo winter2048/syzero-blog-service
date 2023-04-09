@@ -4,6 +4,19 @@
         <name>SyZero.Blog.Application</name>
     </assembly>
     <members>
+        <member name="M:SyZero.Blog.Application.BlogManagement.ArticleAppService.GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <summary>
+            获取所有文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.Application.BlogManagement.ArticleAppService.GetShowInfo(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="F:SyZero.Blog.Application.Configs.AppConts.站点图标">
             <summary>
             网站图标
@@ -157,6 +170,12 @@
         <member name="M:SyZero.Blog.Application.Configs.ConfigAppService.BasicsSetting">
             <summary>
             获取基础设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.Application.Navigations.NavigationAppService.GetAll">
+            <summary>
+            获取导航栏
             </summary>
             <returns></returns>
         </member>

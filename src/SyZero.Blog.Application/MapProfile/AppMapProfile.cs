@@ -16,7 +16,7 @@ namespace SyZero.Blog.Application.MapProfile
         public AppMapProfile()
         {
             CreateMap<ArticleDto, Article>();
-            CreateMap<Article, ArticleDto>();
+            CreateMap<Article, ArticleDto>().ForMember(des => des.CreateTime, opt => opt.MapFrom(p => p.CreateTime.ToDateTimeFormat("yyyy-MM-dd HH:mm:ss")));
             CreateMap<CreateArticleDto, Article>();
 
             CreateMap<CreateArticleCategoryDto, ArticleCategory>();
@@ -27,6 +27,9 @@ namespace SyZero.Blog.Application.MapProfile
 
             CreateMap<Comment, CommentDto>();
             CreateMap<CommentDto, Comment>();
+
+            CreateMap<Comment, CreateCommentDto>();
+            CreateMap<CreateCommentDto, Comment>();
 
             CreateMap<TagDto, Tag>();
             CreateMap<Tag, TagDto>();

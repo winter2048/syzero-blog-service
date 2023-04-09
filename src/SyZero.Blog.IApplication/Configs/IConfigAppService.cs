@@ -67,5 +67,23 @@ namespace SyZero.Blog.IApplication.Configs
         /// <returns></returns>
         [ApiMethod(HttpMethod.POST)]
         Task<bool> AliyunSmsConfig(SmsConfigDto dto);
+
+
+        [ApiMethod(HttpMethod.GET)]
+        Task<object> WebConfig();
+
+        /// <summary>
+        /// 获取喜欢数
+        /// </summary>
+        /// <returns></returns>
+        [ApiMethod(HttpMethod.GET, "ShowLikeNum")]
+        int GetLikeNum();
+
+        /// <summary>
+        /// 喜欢
+        /// </summary>
+        /// <returns></returns>
+        [ApiMethod(HttpMethod.POST)]
+        bool LikeNum();
     }
 }

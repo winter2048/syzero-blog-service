@@ -20,5 +20,12 @@ namespace SyZero.Blog.Application.BlogManagement
         {
             _articleCateRepository= articleCateRepository;
         }
+
+        public async Task<ListResultDto<ArticleCategoryDto>> GetShowAll()
+        {
+            var pp = await _articleCateRepository.GetListAsync();
+            var list = pp.ToList().Where(p => p.ParentId == null).Select(MapToEntityDto).ToList();
+            return new ListResultDto<ArticleCategoryDto>(list);
+        }
     }
 }

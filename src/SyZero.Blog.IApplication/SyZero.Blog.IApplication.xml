@@ -4,6 +4,47 @@
         <name>SyZero.Blog.IApplication</name>
     </assembly>
     <members>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <summary>
+            分页获取博客文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowInfo(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowCollectionAll(SyZero.Blog.IApplication.BlogManagement.Dto.CollectionQueryDto)">
+            <summary>
+            获取所有收藏/喜欢文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.CollectionBlog(System.Int64,System.Int32,System.Boolean)">
+            <summary>
+            添加/取消收藏博客
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.IsCollectionBlog(System.Int64,System.Int32)">
+            <summary>
+            是否收藏/喜欢博客
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetAllBlog">
+            <summary>
+            获取所以博客文章（SEO）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Name">
             <summary>
             名称
@@ -224,6 +265,21 @@
             别名
             </summary>
         </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.Key">
             <summary>
             关键字
@@ -232,6 +288,16 @@
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.CategoryId">
             <summary>
             分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto.Class">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.SimpBlogDto.Title">
+            <summary>
+            标题
             </summary>
         </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Name">
@@ -253,6 +319,26 @@
             <summary>
             描述
             </summary>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.IArticleCategoryAppService.GetShowAll">
+            <summary>
+            获取所有文章分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.ICommentAppService.GetBlogComment(System.Int64,SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <summary>
+            获取文章评论
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.ICommentAppService.SendComment(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto)">
+            <summary>
+            发送文章评论
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
         </member>
         <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.BlogIcon">
             <summary>
@@ -449,6 +535,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.GetLikeNum">
+            <summary>
+            获取喜欢数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.LikeNum">
+            <summary>
+            喜欢
+            </summary>
+            <returns></returns>
+        </member>
         <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.Name">
             <summary>
             名称
@@ -473,6 +571,12 @@
             <summary>
             排序
             </summary>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Links.ILinkAppService.GetAll">
+            <summary>
+            获取友情链接
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.Name">
             <summary>

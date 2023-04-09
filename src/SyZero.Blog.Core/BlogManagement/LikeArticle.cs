@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SyZero.Domain.Entities;
 
 namespace SyZero.Blog.Core.BlogManagement
 {
-    public class LikeArticle
+    public class LikeArticle : Entity
     {
         /// <summary>
         /// 博文Id
