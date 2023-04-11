@@ -18,6 +18,11 @@ namespace SyZero.Blog.Core.Navigations
         public string Url { get; set; }
 
         /// <summary>
+        /// 图标
+        /// </summary>
+        public string Icon { get; set; }
+
+        /// <summary>
         /// 上级Id
         /// </summary>
         public long? ParentId { get; set; }

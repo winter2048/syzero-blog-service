@@ -4,6 +4,82 @@
         <name>SyZero.Blog.IApplication</name>
     </assembly>
     <members>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <summary>
+            分页获取博客文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowInfo(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetShowCollectionAll(SyZero.Blog.IApplication.BlogManagement.Dto.CollectionQueryDto)">
+            <summary>
+            获取所有收藏/喜欢文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.CollectionBlog(System.Int64,System.Int32,System.Boolean)">
+            <summary>
+            添加/取消收藏博客
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.IsCollectionBlog(System.Int64,System.Int32)">
+            <summary>
+            是否收藏/喜欢博客
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Users.IArticleAppService.GetAllBlog">
+            <summary>
+            获取所以博客文章（SEO）
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.Childs">
+            <summary>
+            下级
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto.blognum">
+            <summary>
+            文章数量
+            </summary>
+        </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto.Title">
             <summary>
             标题
@@ -84,6 +160,56 @@
             标签
             </summary>
         </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto.Author">
+            <summary>
+            发表人
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto.Title">
             <summary>
             标题
@@ -139,6 +265,21 @@
             别名
             </summary>
         </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.Key">
             <summary>
             关键字
@@ -147,6 +288,16 @@
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto.CategoryId">
             <summary>
             分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto.Class">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.SimpBlogDto.Title">
+            <summary>
+            标题
             </summary>
         </member>
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Name">
@@ -167,6 +318,429 @@
         <member name="P:SyZero.Blog.IApplication.BlogManagement.Dto.TagDto.Describe">
             <summary>
             描述
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.IArticleCategoryAppService.GetShowAll">
+            <summary>
+            获取所有文章分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.ICommentAppService.GetBlogComment(System.Int64,SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <summary>
+            获取文章评论
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.BlogManagement.ICommentAppService.SendComment(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto)">
+            <summary>
+            发送文章评论
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.BlogIcon">
+            <summary>
+            网站图标
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.BlogName">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.BlogInfo">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.BlogUrl">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.IndexLogNum">
+            <summary>
+            每页文章的数量
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.FooterInfo">
+            <summary>
+            版权说明 站点页底
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.AttType">
+            <summary>
+            上传文件类型
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.AttMaxSize">
+            <summary>
+            上传文件大小
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto.IsClose">
+            <summary>
+            是否关闭网站
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherBanner">
+            <summary>
+            首页Banner
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherRightImg">
+            <summary>
+            右侧Banner
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherLoginImg">
+            <summary>
+            登录Banner
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherGithub">
+            <summary>
+            Github账号
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherQQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherWeibo">
+            <summary>
+            微博
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherWx">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherCsdn">
+            <summary>
+            Csdn
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherJianli">
+            <summary>
+            简历
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto.OtherMore">
+            <summary>
+            更多
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto.SeoTitle">
+            <summary>
+            SEO浏览器站点标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto.SeoKeywords">
+            <summary>
+            SEO浏览器站点关键字
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto.SeoDescription">
+            <summary>
+            SEO浏览器站点描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto.SeoTitleStyle">
+            <summary>
+            文章标题方案
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.AccessKeyID">
+            <summary>
+            密匙ID
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.AccessKeySecret">
+            <summary>
+            密匙
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.SignName">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.RegisterCode">
+            <summary>
+            注册模板码
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.SignInCode">
+            <summary>
+            登录模板码
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto.RetrieveCode">
+            <summary>
+            找回密码模板码
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.BasicsSetting">
+            <summary>
+            获取基础设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.BasicsSetting(SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto)">
+            <summary>
+            更新基础设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.SeoSetting">
+            <summary>
+            获取SEO设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.SeoSetting(SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto)">
+            <summary>
+            更新SEO设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.OtherSetting">
+            <summary>
+            获取其他设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.OtherSetting(SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto)">
+            <summary>
+            更新其他设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.AliyunSmsConfig">
+            <summary>
+            获取阿里短信设置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.AliyunSmsConfig(SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto)">
+            <summary>
+            设置阿里短信设置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.GetLikeNum">
+            <summary>
+            获取喜欢数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Configs.IConfigAppService.LikeNum">
+            <summary>
+            喜欢
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.IsHide">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Links.Dto.LinkDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.IApplication.Links.ILinkAppService.GetAll">
+            <summary>
+            获取友情链接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.IsNewTab">
+            <summary>
+            是否在新窗口打开
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.IsHide">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.ParentId">
+            <summary>
+            上级Id
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.IsNewTab">
+            <summary>
+            是否在新窗口打开
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.IsHide">
+            <summary>
+            是否隐藏
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Navigations.Dto.NavigationDto.Childs">
+            <summary>
+            下级
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Order">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.CreatePageDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Describe">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.CreateUserId">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.CreateUserName">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.CommentNums">
+            <summary>
+            评论数
+            </summary>
+        </member>
+        <member name="P:SyZero.Blog.IApplication.Pages.Dto.PageDto.ViewNums">
+            <summary>
+            查看次数
             </summary>
         </member>
     </members>

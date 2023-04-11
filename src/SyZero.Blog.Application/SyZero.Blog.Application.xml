@@ -4,5 +4,180 @@
         <name>SyZero.Blog.Application</name>
     </assembly>
     <members>
+        <member name="M:SyZero.Blog.Application.BlogManagement.ArticleAppService.GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <summary>
+            获取所有文章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.Application.BlogManagement.ArticleAppService.GetShowInfo(System.Int64)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.站点图标">
+            <summary>
+            网站图标
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.站点标题">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.站点副标题">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.站点地址">
+            <summary>
+            网站标题
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.每页文章数量">
+            <summary>
+            每页文章的数量
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.版权说明">
+            <summary>
+            版权说明 站点页底
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.上传文件类型">
+            <summary>
+            上传文件类型
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.上传文件大小">
+            <summary>
+            上传文件大小
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.关闭网站">
+            <summary>
+            是否关闭网站
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.SEO标题">
+            <summary>
+            SEO浏览器站点标题
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.SEO关键字">
+            <summary>
+            SEO浏览器站点关键字
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.SEO描述">
+            <summary>
+            SEO浏览器站点描述
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.文章标题方案">
+            <summary>
+            文章标题方案
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.首页Banner">
+            <summary>
+            首页Banner
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.右侧Banner">
+            <summary>
+            右侧Banner
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.登录Banner">
+            <summary>
+            登录Banner
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.Github账号">
+            <summary>
+            Github账号
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.QQ">
+            <summary>
+            QQ
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.微博">
+            <summary>
+            微博
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.微信">
+            <summary>
+            微信
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.CSDN">
+            <summary>
+            Csdn
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.简历">
+            <summary>
+            简历
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.更多">
+            <summary>
+            更多
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里密匙ID">
+            <summary>
+            阿里密钥ID
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里密钥">
+            <summary>
+            阿里密钥
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里签名">
+            <summary>
+            阿里签名
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里注册模板">
+            <summary>
+            阿里注册模板
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里登录模板">
+            <summary>
+            阿里登录模板
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.阿里找回密码模板">
+            <summary>
+            阿里找回密码模板
+            </summary>
+        </member>
+        <member name="F:SyZero.Blog.Application.Configs.AppConts.喜欢数">
+            <summary>
+            喜欢数
+            </summary>
+        </member>
+        <member name="M:SyZero.Blog.Application.Configs.ConfigAppService.BasicsSetting">
+            <summary>
+            获取基础设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SyZero.Blog.Application.Navigations.NavigationAppService.GetAll">
+            <summary>
+            获取导航栏
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

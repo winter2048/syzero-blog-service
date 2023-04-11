@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using SyZero.Domain.Entities;
@@ -17,10 +18,12 @@ namespace SyZero.Blog.Core.BlogManagement
         /// <summary>
         /// 内容
         /// </summary>
+        [SugarColumn(ColumnDataType = "longtext")]
         public string Content { get; set; }
         /// <summary>
         /// 描述
         /// </summary>
+        [SugarColumn(ColumnDataType = "longtext")]
         public string Describe { get; set; }
         /// <summary>
         /// 别名
@@ -29,11 +32,7 @@ namespace SyZero.Blog.Core.BlogManagement
         /// <summary>
         /// 分类Id
         /// </summary>
-        public string CategoryIds { get; set; }
-        /// <summary>
-        /// 标签
-        /// </summary>
-        public string TagIds { get; set; }
+        public long? CategoryId { get; set; }
         /// <summary>
         /// 状态
         /// </summary>
@@ -63,12 +62,12 @@ namespace SyZero.Blog.Core.BlogManagement
         /// </summary>
         public int ViewNums { get; set; } = 0;
         /// <summary>
-        /// 创建人
-        /// </summary>
-        public long CreateUserId { get; set; }
-        /// <summary>
         /// 创建时间
         /// </summary>
         public DateTime CreateTime { get; set; } = DateTime.Now;
+        /// <summary>
+        /// 创建人
+        /// </summary>
+        public long? CreateUserId { get; set; }
     }
 }

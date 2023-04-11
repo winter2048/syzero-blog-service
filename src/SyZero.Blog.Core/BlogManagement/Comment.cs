@@ -5,9 +5,8 @@ using SyZero.Domain.Entities;
 
 namespace SyZero.Blog.Core.BlogManagement
 {
-   public class Comment : Entity
+    public class Comment : Entity
     {
-
         /// <summary>
         /// 博文Id
         /// </summary>
@@ -52,5 +51,9 @@ namespace SyZero.Blog.Core.BlogManagement
         /// </summary>
         public DateTime CreateTime { get; set; } = DateTime.Now;
 
+        /// <summary>
+        /// 创建人Id
+        /// </summary>
+        public long? CreateUserId { get; set; }
     }
 }

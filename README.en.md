@@ -1,4 +1,4 @@
-# syzero-authorization-service
+# syzero-blog-service
 
 #### Description
 授权服务
