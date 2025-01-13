@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using SyZero.Application.Routing;
 using SyZero.Blog.IApplication.Configs.Dto;
 
@@ -14,7 +10,7 @@ namespace SyZero.Blog.IApplication.Configs
         /// 获取基础设置
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET)]
+        [Get("BasicsSetting")]
         Task<BasicsSettingDto> BasicsSetting();
 
         /// <summary>
@@ -22,14 +18,14 @@ namespace SyZero.Blog.IApplication.Configs
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
+        [Post("BasicsSetting")]
         Task<bool> BasicsSetting(BasicsSettingDto dto);
 
         /// <summary>
         /// 获取SEO设置
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET)]
+        [Get("SeoSetting")]
         Task<SeoSettingDto> SeoSetting();
 
         /// <summary>
@@ -37,53 +33,53 @@ namespace SyZero.Blog.IApplication.Configs
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
+        [Post("SeoSetting")]
         Task<bool> SeoSetting(SeoSettingDto dto);
 
         /// <summary>
         /// 获取其他设置
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET)]
+        [Get("OtherSetting")]
         Task<OtherSettingDto> OtherSetting();
 
         /// <summary>
         /// 更新其他设置
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
+        [Post("OtherSetting")]
         Task<bool> OtherSetting(OtherSettingDto dto);
 
         /// <summary>
         /// 获取阿里短信设置信息
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET)]
+        [Get("AliyunSmsConfig")]
         Task<SmsConfigDto> AliyunSmsConfig();
 
         /// <summary>
         /// 设置阿里短信设置信息
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
+        [Post("AliyunSmsConfig")]
         Task<bool> AliyunSmsConfig(SmsConfigDto dto);
 
 
-        [ApiMethod(HttpMethod.GET)]
+        [Get("WebConfig")]
         Task<object> WebConfig();
 
         /// <summary>
         /// 获取喜欢数
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET, "ShowLikeNum")]
+        [Get("ShowLikeNum")]
         int GetLikeNum();
 
         /// <summary>
         /// 喜欢
         /// </summary>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST)]
+        [Post("LikeNum")]
         bool LikeNum();
     }
 }

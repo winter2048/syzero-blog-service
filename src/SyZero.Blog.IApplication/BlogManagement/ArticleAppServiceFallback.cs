@@ -28,6 +28,21 @@ namespace SyZero.Blog.IApplication.Users
             throw new NotImplementedException();
         }
 
+        public Task<ArticleDto> Create(CreateArticleDto input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Delete(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ArticleDto> Get(long input)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<ListResultDto<SimpBlogDto>> GetAllBlog()
         {
             throw new NotImplementedException();
@@ -49,6 +64,16 @@ namespace SyZero.Blog.IApplication.Users
         }
 
         public Task<bool> IsCollectionBlog(long Id, int Type)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PageResultDto<ArticleDto>> List(PageAndSortFilterQueryDto input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ArticleDto> Update(long id, ArticleDto input)
         {
             throw new NotImplementedException();
         }

@@ -107,7 +107,7 @@ namespace SyZero.Blog.Application.BlogManagement
             return MapToEntityDto(entity);
         }
 
-        public async override Task<ArticleDto> Update(long id, CreateArticleDto input)
+        public async override Task<ArticleDto> Update(long id, ArticleDto input)
         {
             CheckUpdatePermission();
             var entity = await GetEntityByIdAsync(id);
