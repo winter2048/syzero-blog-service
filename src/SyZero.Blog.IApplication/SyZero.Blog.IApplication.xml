@@ -743,5 +743,317 @@
             查看次数
             </summary>
         </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.GetShowInfo(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.GetShowCollectionAll(SyZero.Blog.IApplication.BlogManagement.Dto.CollectionQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.CollectionBlog(System.Int64,System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.IsCollectionBlog(System.Int64,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.GetAllBlog">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#GetShowAll(SyZero.Blog.IApplication.BlogManagement.Dto.RequestQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#GetShowInfo(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#GetShowCollectionAll(SyZero.Blog.IApplication.BlogManagement.Dto.CollectionQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#CollectionBlog(System.Int64,System.Int32,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#IsCollectionBlog(System.Int64,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Blog#IApplication#Users#IArticleAppService#GetAllBlog">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#PageAndSortFilterQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#PageAndSortFilterQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto}#List(SyZero.Blog.IApplication.BlogManagement.Dto.PageAndSortFilterQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#PageAndSortFilterQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto}#Create(SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#PageAndSortFilterQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto}#Update(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.ArticleDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationUsersIArticleAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#PageAndSortFilterQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.GetShowAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Blog#IApplication#BlogManagement#IArticleCategoryAppService#GetShowAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleCategoryDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleCategoryDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleCategoryDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto}#Create(SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleCategoryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleCategoryDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto}#Update(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.ArticleCategoryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementIArticleCategoryAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleCategoryDto,SyZero#Blog#IApplication#BlogManagement#Dto#ArticleCategoryDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.GetBlogComment(System.Int64,SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SendComment(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Blog#IApplication#BlogManagement#ICommentAppService#GetBlogComment(System.Int64,SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Blog#IApplication#BlogManagement#ICommentAppService#SendComment(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.CreateCommentDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto}#Create(SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto}#Update(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.CommentDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementICommentAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto,SyZero#Blog#IApplication#BlogManagement#Dto#CommentDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.BasicsSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.BasicsSetting(SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SeoSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SeoSetting(SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.OtherSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.OtherSetting(SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.AliyunSmsConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.AliyunSmsConfig(SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.WebConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.GetLikeNum">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.LikeNum">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#BasicsSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#BasicsSetting(SyZero.Blog.IApplication.Configs.Dto.BasicsSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#SeoSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#SeoSetting(SyZero.Blog.IApplication.Configs.Dto.SeoSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#OtherSetting">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#OtherSetting(SyZero.Blog.IApplication.Configs.Dto.OtherSettingDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#AliyunSmsConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#AliyunSmsConfig(SyZero.Blog.IApplication.Configs.Dto.SmsConfigDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#WebConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#GetLikeNum">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationConfigsIConfigAppService.SyZero#Blog#IApplication#Configs#IConfigAppService#LikeNum">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.GetAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Blog#IApplication#Links#ILinkAppService#GetAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Blog#IApplication#Links#Dto#LinkDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Blog#IApplication#Links#Dto#LinkDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Blog#IApplication#Links#Dto#LinkDto}#Create(SyZero.Blog.IApplication.Links.Dto.LinkDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Blog#IApplication#Links#Dto#LinkDto}#Update(System.Int64,SyZero.Blog.IApplication.Links.Dto.LinkDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationLinksILinkAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Links#Dto#LinkDto,SyZero#Blog#IApplication#Links#Dto#LinkDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.GetAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Blog#IApplication#Navigations#INavigationAppService#GetAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Navigations#Dto#NavigationDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Navigations#Dto#CreateNavigationDto,SyZero#Blog#IApplication#Navigations#Dto#NavigationDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Navigations#Dto#NavigationDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Navigations#Dto#CreateNavigationDto,SyZero#Blog#IApplication#Navigations#Dto#NavigationDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Navigations#Dto#NavigationDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Navigations#Dto#CreateNavigationDto,SyZero#Blog#IApplication#Navigations#Dto#NavigationDto}#Create(SyZero.Blog.IApplication.Navigations.Dto.CreateNavigationDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Navigations#Dto#NavigationDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Navigations#Dto#CreateNavigationDto,SyZero#Blog#IApplication#Navigations#Dto#NavigationDto}#Update(System.Int64,SyZero.Blog.IApplication.Navigations.Dto.NavigationDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationNavigationsINavigationAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Navigations#Dto#NavigationDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#Navigations#Dto#CreateNavigationDto,SyZero#Blog#IApplication#Navigations#Dto#NavigationDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto}#Create(SyZero.Blog.IApplication.BlogManagement.Dto.TagDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto}#Update(System.Int64,SyZero.Blog.IApplication.BlogManagement.Dto.TagDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationBlogManagementITagAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto,SyZero#Blog#IApplication#BlogManagement#Dto#TagDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Pages#Dto#PageDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#Pages#Dto#PageDto}#Get(System.Int64)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Pages#Dto#PageDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#Pages#Dto#PageDto}#List(SyZero.Application.Service.Dto.PageAndSortQueryDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Pages#Dto#PageDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#Pages#Dto#PageDto}#Create(SyZero.Blog.IApplication.BlogManagement.Dto.CreateArticleDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Pages#Dto#PageDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#Pages#Dto#PageDto}#Update(System.Int64,SyZero.Blog.IApplication.Pages.Dto.PageDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.SyZeroBlogIApplicationPagesIPageAppService.SyZero#Application#Service#IAsyncCrudAppService{SyZero#Blog#IApplication#Pages#Dto#PageDto,SyZero#Application#Service#Dto#PageAndSortQueryDto,SyZero#Blog#IApplication#BlogManagement#Dto#CreateArticleDto,SyZero#Blog#IApplication#Pages#Dto#PageDto}#Delete(System.Int64)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

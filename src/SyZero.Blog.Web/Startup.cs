@@ -1,5 +1,4 @@
-﻿using Autofac;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.Configuration;
@@ -45,31 +44,26 @@ namespace SyZero.Blog.Web
             });
             //Swagger
             services.AddSwagger();
-        }
 
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
             //使用SyZero
-            builder.AddSyZero();
+            services.AddSyZero();
             //使用AutoMapper
-            builder.AddSyZeroAutoMapper();
+            services.AddSyZeroAutoMapper();
             //使用SqlSugar仓储
-            builder.AddSyZeroSqlSugar<BlogDbContext>();
+            services.AddSyZeroSqlSugar<BlogDbContext>();
             //注入控制器
-            builder.AddSyZeroController();
+            services.AddSyZeroController();
             //注入Log4Net
-            builder.AddSyZeroLog4Net();
+            services.AddSyZeroLog4Net();
             //注入Redis
-            builder.AddSyZeroRedis();
+            services.AddSyZeroRedis();
             //注入公共层
-            builder.AddSyZeroCommon();
+            services.AddSyZeroCommon();
             //注入Consul
-            builder.AddConsul();            
+            services.AddConsul();
             //注入Feign
-            builder.AddSyZeroFeign();
-     
+            services.AddSyZeroFeign();
         }
-
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

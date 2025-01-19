@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SyZero.Application.Routing;
+using SyZero.Application.Service;
 using SyZero.Application.Service.Dto;
 using SyZero.Blog.IApplication.BlogManagement.Dto;
 
 namespace SyZero.Blog.IApplication.BlogManagement
 {
-    public interface ICommentAppService : IApplicationServiceBase
+    public interface ICommentAppService : IAsyncCrudAppService<CommentDto>, IApplicationServiceBase
     {
 
         /// <summary>
@@ -17,7 +18,7 @@ namespace SyZero.Blog.IApplication.BlogManagement
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.GET, "Blog/{BlogId}")]
+        [Get("Blog/{BlogId}")]
         Task<PageResultDto<CommentDto>> GetBlogComment(long BlogId, PageAndSortQueryDto input);
 
         /// <summary>
@@ -25,7 +26,7 @@ namespace SyZero.Blog.IApplication.BlogManagement
         /// </summary>
         /// <param name="Id"></param>
         /// <returns></returns>
-        [ApiMethod(HttpMethod.POST, "Blog/{BlogId}")]
+        [Post("Blog/{BlogId}")]
         Task<bool> SendComment(long BlogId, CreateCommentDto dto);
     }
 }
