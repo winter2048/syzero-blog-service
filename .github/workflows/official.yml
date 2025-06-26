@@ -41,7 +41,7 @@ jobs:
         run: dotnet build --configuration Release ./syzero-blog-service/src/SyZero.Blog.sln --no-restore
 
       - name: Upload package
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: |
@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
 
@@ -97,7 +97,7 @@ jobs:
         uses: docker/build-push-action@v4
         if: github.ref_name == 'master'
         with:
-          context: ./Release/net6.0/
+          context: ./Release/net8.0/
           push: true
           tags: |
             harbor.syzero.com/syzero/syzero.blog.service:latest
@@ -107,7 +107,7 @@ jobs:
         uses: docker/build-push-action@v4
         if: github.ref_name == 'dev'
         with:
-          context: ./Release/net6.0/
+          context: ./Release/net8.0/
           push: true
           tags: |
             harbor.syzero.com/syzero/syzero.blog.service:dev
