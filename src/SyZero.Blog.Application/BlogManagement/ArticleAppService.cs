@@ -34,6 +34,7 @@ namespace SyZero.Blog.Application.BlogManagement
         private readonly IRepository<LikeArticle> _likeArticleRepository;
         private readonly IAuthAppService _authAppService;
         private readonly IUserAppService _userAppService;
+        private readonly IBlogRepository _blogRepository;
 
         public ArticleAppService(IRepository<ArticleTag> articleTagRepository,
             IRepository<Article> articleRepository,
@@ -42,7 +43,8 @@ namespace SyZero.Blog.Application.BlogManagement
             IAuthAppService authAppService,
             IUserAppService userAppService,
             IRepository<Comment> commentRepository,
-            IRepository<LikeArticle> likeArticleRepository) : base(articleRepository)
+            IRepository<LikeArticle> likeArticleRepository,
+            IBlogRepository blogRepository) : base(articleRepository)
         {
             _articleTagRepository = articleTagRepository;
             _articleRepository = articleRepository;
@@ -52,6 +54,7 @@ namespace SyZero.Blog.Application.BlogManagement
             _userAppService = userAppService;
             _commentRepository = commentRepository;
             _likeArticleRepository = likeArticleRepository;
+            _blogRepository = blogRepository;
         }
      
         protected override async Task<IQueryable<Article>> CreateFilteredQueryAsync(PageAndSortFilterQueryDto input)
@@ -74,7 +77,15 @@ namespace SyZero.Blog.Application.BlogManagement
             foreach (var item in list.list)
             {
                 item.CategoryName = articleCategoryList.FirstOrDefault(p => p.Id == item.CategoryId)?.Name;
-                item.CreateUserName = item.CreateUserId.HasValue ? (await _userAppService.GetUser(item.CreateUserId.Value))?.Name : "";
+                try
+                {
+                    item.CreateUserName = item.CreateUserId.HasValue ? (await _userAppService.GetUser(item.CreateUserId.Value))?.Name : "";
+                }
+                catch (Exception ex)
+                {
+                    await Console.Out.WriteLineAsync(ex.Message);
+                }
+               
             }
             return list;
         }
@@ -130,7 +141,7 @@ namespace SyZero.Blog.Application.BlogManagement
         /// <returns></returns>
         public async Task<PageResultDto<ArticleDto>> GetShowAll(RequestQueryDto input)
         {
-            var query = await _articleRepository.GetListAsync(p => p.Status == 1);
+            var query = await _blogRepository.GetListAsync(p => p.Status == 1);
             //if (!String.IsNullOrEmpty(input.Class))
             //{
             //    query = query.Where(p => p.Category.Id == input.Class.ToLong() || p.Category.Alias == input.Class || p.Category.Parent.Id == input.Class.ToLong() || p.Category.Parent.Alias == input.Class);
