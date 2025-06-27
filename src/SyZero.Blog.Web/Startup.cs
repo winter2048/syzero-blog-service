@@ -8,7 +8,9 @@ using Microsoft.Extensions.Hosting;
 using OpenTelemetry;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using System.Xml.Linq;
 using SyZero.Blog.Repository;
 using SyZero.Blog.Web.Core.Filter;
 using SyZero.DynamicWebApi;
@@ -30,8 +32,14 @@ namespace SyZero.Blog.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOpenTelemetry()
-                .WithTracing(b => b.AddSource("*")
-                    .AddAspNetCoreInstrumentation()
+                .WithTracing(b => b.SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(AppConfig.ServerOptions.Name)).AddSource("*")
+                    .AddAspNetCoreInstrumentation(opt =>
+                    {
+                        opt.Filter = context =>
+                        {
+                            return context.Request.Path.ToString().StartsWith("/api/");
+                        };
+                    })
                     .AddHttpClientInstrumentation().AddConsoleExporter()
                     .AddSource("Microsoft.AspNetCore.Hosting"))
                 .WithMetrics(b => b.AddMeter("*")
