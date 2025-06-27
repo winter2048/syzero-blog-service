@@ -32,7 +32,7 @@ namespace SyZero.Blog.Web
                 .WithTracing(b => b.AddSource("*")
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
-                    .AddSource("System.Net.Http"))
+                    .AddSource("Microsoft.AspNetCore.Hosting"))
                 .WithMetrics(b => b.AddMeter("*")
                     .AddAspNetCoreInstrumentation()
                     .AddHttpClientInstrumentation()
