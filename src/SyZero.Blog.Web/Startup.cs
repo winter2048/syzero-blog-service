@@ -76,7 +76,7 @@ namespace SyZero.Blog.Web
                     .AddHttpClientInstrumentation()
                     .AddPrometheusExporter())
                 .WithLogging()
-                .UseOtlpExporter();
+                .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
