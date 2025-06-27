@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
 using SyZero.Blog.Repository;
 using SyZero.Blog.Web.Core.Filter;
 using SyZero.DynamicWebApi;
@@ -63,6 +66,17 @@ namespace SyZero.Blog.Web
             services.AddConsul();
             //注入Feign
             services.AddSyZeroFeign();
+
+            services.AddOpenTelemetry()
+                .WithTracing(b => b.AddSource("*")
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation())
+                .WithMetrics(b => b.AddMeter("*")
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddPrometheusExporter())
+                .WithLogging()
+                .UseOtlpExporter();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -94,6 +108,7 @@ namespace SyZero.Blog.Web
 
             });
             app.UseConsul();
+            app.UseOpenTelemetryPrometheusScrapingEndpoint();
             app.InitTables();
         }
     }
