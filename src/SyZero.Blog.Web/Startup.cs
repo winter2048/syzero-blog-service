@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using OpenTelemetry;
+using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using SyZero.Blog.Repository;
@@ -31,11 +32,11 @@ namespace SyZero.Blog.Web
             services.AddOpenTelemetry()
                 .WithTracing(b => b.AddSource("*")
                     .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
+                    .AddHttpClientInstrumentation().AddAspNetInstrumentation()
                     .AddSource("Microsoft.AspNetCore.Hosting"))
                 .WithMetrics(b => b.AddMeter("*")
                     .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
+                    .AddHttpClientInstrumentation().AddAspNetInstrumentation()
                     .AddPrometheusExporter())
                 .WithLogging()
                 .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
