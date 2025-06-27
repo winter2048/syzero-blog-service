@@ -32,7 +32,7 @@ namespace SyZero.Blog.Web
             services.AddOpenTelemetry()
                 .WithTracing(b => b.AddSource("*")
                     .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation().AddAspNetInstrumentation()
+                    .AddHttpClientInstrumentation().AddConsoleExporter()
                     .AddSource("Microsoft.AspNetCore.Hosting"))
                 .WithMetrics(b => b.AddMeter("*")
                     .AddAspNetCoreInstrumentation()
@@ -42,6 +42,7 @@ namespace SyZero.Blog.Web
                 .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
 
             services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
+
 
             services.AddControllers().AddMvcOptions(options =>
             {
