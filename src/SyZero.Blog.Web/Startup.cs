@@ -28,6 +28,18 @@ namespace SyZero.Blog.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOpenTelemetry()
+                .WithTracing(b => b.AddSource("*")
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddSource("System.Net.Http"))
+                .WithMetrics(b => b.AddMeter("*")
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddPrometheusExporter())
+                .WithLogging()
+                .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
+
             services.Replace(ServiceDescriptor.Transient<IControllerActivator, ServiceBasedControllerActivator>());
 
             services.AddControllers().AddMvcOptions(options =>
@@ -66,17 +78,6 @@ namespace SyZero.Blog.Web
             services.AddConsul();
             //注入Feign
             services.AddSyZeroFeign();
-
-            services.AddOpenTelemetry()
-                .WithTracing(b => b.AddSource("*")
-                    .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation())
-                .WithMetrics(b => b.AddMeter("*")
-                    .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddPrometheusExporter())
-                .WithLogging()
-                .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
