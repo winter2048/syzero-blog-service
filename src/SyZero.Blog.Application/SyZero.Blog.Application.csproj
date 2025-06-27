@@ -15,6 +15,7 @@
     <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
+
   <ItemGroup>
     <ProjectReference Include="..\SyZero.Blog.IApplication\SyZero.Blog.IApplication.csproj" />
     <ProjectReference Include="..\SyZero.Blog.Repository\SyZero.Blog.Repository.csproj" />

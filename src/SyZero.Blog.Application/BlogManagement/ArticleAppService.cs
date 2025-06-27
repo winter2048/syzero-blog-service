@@ -10,7 +10,6 @@ using SyZero.Blog.IApplication.BlogManagement.Dto;
 using SyZero.Blog.IApplication.Users;
 using SyZero.Blog.Repository;
 using SyZero.Cache;
-using SyZero.Logger;
 using SyZero.Runtime.Security;
 using SyZero.Runtime.Session;
 using SyZero.Serialization;
