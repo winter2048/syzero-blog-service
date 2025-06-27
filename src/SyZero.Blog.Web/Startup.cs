@@ -36,7 +36,7 @@ namespace SyZero.Blog.Web
                     .AddSource("Microsoft.AspNetCore.Hosting"))
                 .WithMetrics(b => b.AddMeter("*")
                     .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation().AddAspNetInstrumentation()
+                    .AddHttpClientInstrumentation()
                     .AddPrometheusExporter())
                 .WithLogging()
                 .UseOtlpExporter(OpenTelemetry.Exporter.OtlpExportProtocol.Grpc, new System.Uri("http://aspire-dashboard:18889"));
