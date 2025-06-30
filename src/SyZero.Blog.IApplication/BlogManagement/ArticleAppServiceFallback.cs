@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +7,6 @@ using SyZero.Application.Service.Dto;
 using SyZero.Blog.IApplication.BlogManagement.Dto;
 using SyZero.Cache;
 using SyZero.Client;
-using SyZero.Logger;
 using SyZero.Runtime.Security;
 using SyZero.Serialization;
 using SyZero.Web.Common;
@@ -16,9 +15,9 @@ namespace SyZero.Blog.IApplication.Users
 {
     public class ArticleAppServiceFallback : IArticleAppService, IFallback
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<ArticleAppServiceFallback> _logger;
 
-        public ArticleAppServiceFallback(ILogger logger)
+        public ArticleAppServiceFallback(ILogger<ArticleAppServiceFallback> logger)
         {
             _logger = logger;
         }
